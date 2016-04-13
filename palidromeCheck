@@ -1,0 +1,7 @@
+function palindromeCheck(string) {
+  tempStr = string.toLowerCase().replace(/[^a-z|1-9]/g, ""); //convert to lowercase first as ^a-z|1-9 removes Upper Case letters too
+  compareStr = tempStr.split('').reverse().join('');
+  return tempStr === compareStr;
+}
+
+palindromeCheck("taco cat");
