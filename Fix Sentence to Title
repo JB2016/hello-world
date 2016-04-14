@@ -1,0 +1,11 @@
+function sentenceFix(string) {
+  var newStr = string.toLowerCase().split(' '); //all lowerCase and make subString
+  for (var i=0;i<newStr.length; i++){ 
+    var firstLetter = newStr[i].charAt(0); //first character of each subString
+    var capitalLetter = firstLetter.toUpperCase(); //make upperCase
+    newStr[i] = newStr[i].replace(firstLetter, capitalLetter); //make firstLetter capitalLetter
+  }
+  return newStr.join(' ');  //make string again
+}
+
+sentenceFix("sUpEr CalA fRaGILisTiC ExPIaLiDOciOus");
